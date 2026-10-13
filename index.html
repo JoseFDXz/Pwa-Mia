@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10251d">
+    <meta name="description" content="Tu espacio de fútbol: partidos y recordatorios, incluso sin conexión.">
+    <title>Mi Cancha — fútbol a tu manera</title>
+    <link rel="icon" href="./images/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Mi Cancha, inicio">
+        <img src="./images/icon.svg" alt="" width="42" height="42">
+        <span>mi cancha<span class="brand-dot">.</span></span>
+      </a>
+      <div class="top-actions">
+        <span id="connection-status" class="connection-status" role="status">Comprobando conexión…</span>
+        <button id="install-button" class="button button-outline" type="button" hidden>Instalar app</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> TU FÚTBOL, SIEMPRE CONTIGO</p>
+          <h1 id="hero-title">La pasión no<br>se desconecta.</h1>
+          <p class="hero-description">Sigue los partidos que te importan y guarda tus recordatorios. Mi Cancha está lista incluso cuando no hay internet.</p>
+          <a class="button button-light" href="#partidos">Ver partidos <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-ball" aria-hidden="true">
+          <div class="ball-glow"></div>
+          <div class="ball"><img src="./images/football.svg" alt=""></div>
+          <span class="hero-orbit orbit-one"></span>
+          <span class="hero-orbit orbit-two"></span>
+          <img class="hero-spark spark-one" src="./images/boot.svg" alt="">
+          <img class="hero-spark spark-two" src="./images/football.svg" alt="">
+        </div>
+        <div class="hero-note"><span>90'</span><span>+</span><span class="note-caption">Y seguimos jugando</span></div>
+      </section>
+
+      <section class="content-section" id="partidos" aria-labelledby="matches-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark"><img class="eyebrow-icon" src="./images/trophy.svg" alt=""> AGENDA DE LA CANCHA</p>
+            <h2 id="matches-title">Partidos destacados</h2>
+          </div>
+          <span class="section-caption">Próximos encuentros</span>
+        </div>
+        <div id="match-list" class="match-list" aria-live="polite"></div>
+      </section>
+
+      <section class="reminders-section" aria-labelledby="reminders-title">
+        <div class="reminders-copy">
+          <span class="reminder-icon"><img src="./images/calendar.svg" alt=""></span>
+          <div>
+            <p class="eyebrow eyebrow-dark">NO TE PIERDAS NADA</p>
+            <h2 id="reminders-title">Tus recordatorios</h2>
+            <p class="section-caption">Se guardan en este dispositivo y están disponibles sin conexión.</p>
+          </div>
+        </div>
+        <button id="notification-button" class="button button-dark" type="button"><img class="button-icon" src="./images/bell.svg" alt="">Activar notificaciones</button>
+      </section>
+      <ul id="reminder-list" class="reminder-list" aria-live="polite"></ul>
+      <p id="app-message" class="app-message" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer class="footer">
+      <a class="brand brand-footer" href="./">
+        <img src="./images/icon.svg" alt="" width="30" height="30">
+        <span>mi cancha<span class="brand-dot">.</span></span>
+      </a>
+      <span class="footer-tagline"><img src="./images/stadium.svg" alt=""> Hecha para vivir el fútbol, con o sin conexión.</span>
+    </footer>
+  </body>
+</html>
